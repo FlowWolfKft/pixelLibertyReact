@@ -1,0 +1,93 @@
+#main-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+#main-menu ul li {
+  margin-left: 2rem;
+}
+#main-menu ul li a {
+  color: #fff;
+  padding: 0.75rem 0;
+  /*font-weight: bold;*/
+  font-size: smaller;
+  position: relative;
+}
+#main-menu ul li a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  position: absolute;
+  bottom: 5px;
+}
+#main-menu ul li a:hover:before {
+  background: var(--white);
+  transition: 0.4s ease-in-out;
+  font-weight: bold;
+}
+#main-menu ul li a:hover {
+  color: var(--homok);
+}
+#main-menu ul li ul {
+  display: none;
+}
+#hamburger {
+  display: none;
+}
+@media only screen and (max-width: 1281px) {
+  #main-menu ul {
+    display: block;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  #main-menu ul li {
+    margin: 0;
+    padding: 0;
+    border-top: solid 1px var(--white);
+  }
+  #main-menu ul li a {
+    padding: 0.75rem 0;
+    display: block;
+  }
+  #hamburger {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: solid 3px var(--homok);
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 1rem;
+    transition: 0.4s ease-in-out;
+  }
+  #hamburger svg path {
+    stroke: white;
+  }
+  #hamburger.nyitva {
+    background: var(--dark-pink);
+  }
+  #hamburger.nyitva .path-none {
+    display: none;
+  }
+  #hamburger.nyitva path {
+    stroke: var(--white);
+  }
+  #main-menu {
+    max-height: 0;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+  }
+  #main-menu.nyitva {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  #hamburger svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #logo {
+    margin-left: 1rem;
+  }
+}

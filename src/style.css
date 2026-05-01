@@ -1,0 +1,280 @@
+/*
+Theme Name: My Awesome Theme
+Theme URI: https://www.myawesometheme.com
+Author: John Doe
+Author URI: https://www.johndoe.com
+Description: My Awesome Theme is a responsive, modern, and feature-rich WordPress theme designed for all kinds of websites. It comes with a custom homepage layout, multiple widget areas, and full compatibility with popular plugins.
+Version: 1.0.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: my-awesome-theme
+Tags: responsive, modern, custom-background, custom-header, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --dark-green: #2698ac;
+  --turkiz: #43fde6;
+  --zold: #80c9d8;
+  --homok: #d9d9d9;
+  --body-text: #434f49;
+  --pink: #e9a9c4;
+  --title: #2a3937;
+  --dark-pink: #dc6ea6;
+  --radius: 0.5rem;
+  --white: #fff;
+  --petrol-green: #094457;
+  --ice-blue: #e9faff;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1025px) {
+  html {
+    font-size: 1.4vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "inter", sans-serif;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: var(--title);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--dark-green);
+}
+
+@media (min-width: 1024px) {
+  .single-post .col-3-4 > div {
+    max-width: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  .single-post .col-3-4 p,
+  .single-post .col-3-4 .visible {
+    max-width: none;
+    width: 100%;
+    margin-right: -80px; /* vagy amit beállítottál */
+  }
+}
+
+p,
+li {
+  line-height: 1.3;
+  font-size: 1.5rem;
+}
+ul {
+  padding: 0 20px;
+  list-style-type: square;
+}
+ul li::marker {
+  color: var(--dark-pink);
+  font-size: 20px;
+  line-height: 0;
+}
+ol {
+  padding-left: 1.5rem;
+}
+ol li::marker {
+  color: #fff;
+  font-weight: bold;
+}
+ol li {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  line-height: 2rem;
+}
+ol li::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background: var(--dark-green);
+  display: block;
+  position: absolute;
+  top: 0rem;
+  left: -2.25rem;
+  z-index: -1;
+  border-radius: 50%;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+h1 {
+  font-family: "Playfair display";
+  font-weight: 450;
+  font-style: oblique;
+  font-size: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+  z-index: 1;
+  justify-content: center;
+}
+/*h1,
+.hero h1 + h3,
+.hero h1 + h2,
+.hero h1 + p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation-delay: 0.4s;
+}
+h1.visible,
+.hero h1 + h3.visible,
+.hero h1 + h2.visible,
+.hero h1 + p.visible {
+  animation: hello 1s ease-in-out forwards;
+}
+@keyframes hello {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}*/
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 1rem;
+}
+h3,
+p {
+  font-size: 1.5rem;
+}
+.kapcsolatfelvetel,
+input[type="submit"] {
+  display: inline-block;
+  padding: 1rem 1rem;
+  color: #fff;
+  background-color: var(--dark-green);
+  text-transform: uppercase;
+
+  border: 2px solid #333333;
+  border-radius: 32px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.kapcsolatfelvetel:hover {
+  padding: 1rem 1rem;
+  color: #fff;
+  background-color: var(--dark-pink);
+  text-transform: uppercase;
+
+  border: 2px solid #333333;
+  border-radius: 32px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  transform: scale(1.1);
+}
+
+a.button {
+  margin-left: 40px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.hero {
+  background-color: var(--white);
+  padding: 6vw 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: 12;
+  margin: auto;
+}
+
+.impresszum {
+  background: whitesmoke;
+  border: 2px solid var(--dark-green);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+  padding-left: 20px;
+  border-radius: 0px 20px 0px 20px;
+  max-width: 75%;
+  margin-bottom: 2rem;
+  transition: 0.2s ease;
+  transform-origin: left center;
+}
+.impresszum:hover {
+  transform: scale(1.02) translateX(5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease;
+}
+
+footer {
+  background-color: var(--petrol-green);
+  position: relative;
+  z-index: 9;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  font: smaller;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: var(--dark-pink);
+}
+.footer-social {
+  background-color: #fff;
+  box-shadow: inset 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  border-bottom: solid 3px white;
+  text-align: center;
+}
+#copyright p {
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 1281px) {
+  #head .content-box {
+    flex-wrap: wrap;
+  }
+  #head-menu {
+    width: 100%;
+  }
+  .hero,
+  .fullwide,
+  .services,
+  .packet-bg,
+  .about-bg,
+  .sm-bg,
+  .contact,
+  .blog-bg {
+    width: 100vw;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 781px) {
+}
