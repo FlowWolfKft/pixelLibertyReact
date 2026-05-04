@@ -2,11 +2,11 @@
   --gap: 30px;
 }
 .content-box,
-.blog-bg .wp-block-group__inner-container,
-.services .wp-block-group__inner-container,
-.fullwide .wp-block-group__inner-container,
-.contact .wp-block-group__inner-container,
-.services .wp-block-post-template,
+.blog-bg ,
+.services ,
+.fullwide ,
+.contact,
+.services,
 .pack,
 .feliratkozas,
 .nyito-szoveg {

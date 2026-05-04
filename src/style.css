@@ -1,19 +1,7 @@
-/*
-Theme Name: My Awesome Theme
-Theme URI: https://www.myawesometheme.com
-Author: John Doe
-Author URI: https://www.johndoe.com
-Description: My Awesome Theme is a responsive, modern, and feature-rich WordPress theme designed for all kinds of websites. It comes with a custom homepage layout, multiple widget areas, and full compatibility with popular plugins.
-Version: 1.0.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: my-awesome-theme
-Tags: responsive, modern, custom-background, custom-header, custom-menu, featured-images, threaded-comments, translation-ready
-*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --dark-green: #2698ac;
+  /*--dark-green: #2698ac;
   --turkiz: #43fde6;
   --zold: #80c9d8;
   --homok: #d9d9d9;
@@ -23,8 +11,25 @@ Tags: responsive, modern, custom-background, custom-header, custom-menu, feature
   --dark-pink: #dc6ea6;
   --radius: 0.5rem;
   --white: #fff;
+  
+  --ice-blue: #e9faff;*/
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  --dark-green: #3e524c;
   --petrol-green: #094457;
+  --medium-green: #6f847a;
+  --green: #8a9e94;
+  --light-green: #b6c0b3;
+  --homok: #d9d9d9;
+  --body-text: #434f49;
+  --pink: #e9a9c4;
+  --dark-pink: #dc6ea6;
+  --title: #2a3937;
+  --white: #fff;
   --ice-blue: #e9faff;
+  --light-blue: #a0bbe4;
+  --dark-blue: #2a6aca;
+  --radius: 0.5rem;
 }
 *,
 *:before,
@@ -46,11 +51,19 @@ Tags: responsive, modern, custom-background, custom-header, custom-menu, feature
     font-size: 14px;
   }
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: "inter", sans-serif;
   overflow-x: hidden;
+
+  background: linear-gradient(180deg, #163552 0%, #122a44 100%);
+}
+.about-img {
+  width: clamp(250px, 40vw, 450px);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
 }
 img {
   max-width: 100%;
@@ -62,6 +75,44 @@ a {
 }
 a:hover {
   color: var(--dark-green);
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.services-card {
+  background: #f1f5f9;
+  border: 2px solid var(--light-blue);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding-left: 20px;
+  border-radius: 0px 20px 0px 20px;
+  max-width: 75%;
+  margin-bottom: 2rem;
+  /*transition: 0.2s ease;
+  transform-origin: left center;*/
+}
+/*.services-card:hover {
+  transform: translateY(-5px);
+}*/
+.services-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  background-color: var(--green);
+  text-transform: uppercase;
+  border: 1px solid #333333;
+  border-radius: 24px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  margin-bottom: 2rem;
+}
+.services-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--homok);
+  color: var(--body-text);
 }
 
 @media (min-width: 1024px) {
@@ -78,17 +129,15 @@ a:hover {
   }
 }
 
-p,
 li {
   line-height: 1.3;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 ul {
   padding: 0 20px;
-  list-style-type: square;
 }
 ul li::marker {
-  color: var(--dark-pink);
+  color: var(--petrol-green);
   font-size: 20px;
   line-height: 0;
 }
@@ -125,43 +174,26 @@ h3 {
 }
 h1 {
   font-family: "Playfair display";
-  font-weight: 450;
+  font-weight: 400;
   font-style: oblique;
   font-size: 3rem;
   position: relative;
   padding-bottom: 1rem;
   z-index: 1;
-  justify-content: center;
+  text-align: center;
 }
-/*h1,
-.hero h1 + h3,
-.hero h1 + h2,
-.hero h1 + p {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation-delay: 0.4s;
-}
-h1.visible,
-.hero h1 + h3.visible,
-.hero h1 + h2.visible,
-.hero h1 + p.visible {
-  animation: hello 1s ease-in-out forwards;
-}
-@keyframes hello {
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}*/
 h2 {
   font-size: 2rem;
   margin-top: 0;
   position: relative;
   padding-bottom: 1rem;
 }
-h3,
-p {
+h3 {
   font-size: 1.5rem;
+}
+p {
+  font-family: inter;
+  font-size: 1.3rem;
 }
 .kapcsolatfelvetel,
 input[type="submit"] {
@@ -201,15 +233,8 @@ a.button {
 }
 
 .hero {
-  background-color: var(--white);
-  padding: 6vw 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  color: var(--homok);
   overflow: hidden;
-  position: relative;
-  z-index: 12;
-  margin: auto;
 }
 
 .impresszum {
