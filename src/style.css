@@ -94,7 +94,9 @@ a:hover {
   /*transition: 0.2s ease;
   transform-origin: left center;*/
 }
-.services-card p{color: var(--body-text)}
+.services-card p {
+  color: var(--body-text);
+}
 /*.services-card:hover {
   transform: translateY(-5px);
 }*/
@@ -197,7 +199,7 @@ h3 {
 p {
   font-family: inter;
   font-size: 1.3rem;
-  color: var(--grey)
+  color: var(--grey);
 }
 .contact-btn,
 input[type="submit"] {
@@ -216,8 +218,8 @@ input[type="submit"] {
 }
 .contact-btn:hover {
   padding: 1rem 1rem;
-  color: var(--body-text);
-  background-color: #B4D7CD;
+  color: var(--white);
+  background-color: #c495eb;
   text-transform: uppercase;
 
   border: 2px solid #333333;
