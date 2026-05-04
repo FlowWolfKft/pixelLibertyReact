@@ -17,7 +17,7 @@
 
   --dark-green: #3e524c;
   --petrol-green: #094457;
-  --medium-green: #6f847a;
+  --medium-green: #679587;
   --green: #8a9e94;
   --light-green: #b6c0b3;
   --homok: #d9d9d9;
@@ -29,6 +29,7 @@
   --ice-blue: #e9faff;
   --light-blue: #a0bbe4;
   --dark-blue: #2a6aca;
+  --grey: #acacac;
   --radius: 0.5rem;
 }
 *,
@@ -76,30 +77,32 @@ a {
 a:hover {
   color: var(--dark-green);
 }
-.services {
+/*.services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-}
+}*/
 .services-card {
-  background: #f1f5f9;
-  border: 2px solid var(--light-blue);
+  background: var(--homok);
+  border: 2px solid var(--homok);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   padding-left: 20px;
   border-radius: 0px 20px 0px 20px;
   max-width: 75%;
   margin-bottom: 2rem;
+  color: var(--title);
   /*transition: 0.2s ease;
   transform-origin: left center;*/
 }
+.services-card p{color: var(--body-text)}
 /*.services-card:hover {
   transform: translateY(-5px);
 }*/
 .services-btn {
   display: inline-block;
   padding: 0.8rem 1.2rem;
-  color: #fff;
-  background-color: var(--green);
+  color: var(--body-text);
+  /*background-color: var(--green);*/
   text-transform: uppercase;
   border: 1px solid #333333;
   border-radius: 24px;
@@ -111,8 +114,8 @@ a:hover {
 }
 .services-btn:hover {
   transform: scale(1.1);
-  background-color: var(--homok);
-  color: var(--body-text);
+  background-color: var(--petrol-green);
+  color: var(--white);
 }
 
 @media (min-width: 1024px) {
@@ -194,26 +197,27 @@ h3 {
 p {
   font-family: inter;
   font-size: 1.3rem;
+  color: var(--grey)
 }
-.kapcsolatfelvetel,
+.contact-btn,
 input[type="submit"] {
   display: inline-block;
   padding: 1rem 1rem;
   color: #fff;
-  background-color: var(--dark-green);
+  background-color: var(--medium-green);
   text-transform: uppercase;
 
   border: 2px solid #333333;
-  border-radius: 32px;
+  border-radius: 24px;
   font-family: inherit;
   font-size: inherit;
   line-height: 1;
   transition: transform 0.2s ease;
 }
-.kapcsolatfelvetel:hover {
+.contact-btn:hover {
   padding: 1rem 1rem;
-  color: #fff;
-  background-color: var(--dark-pink);
+  color: var(--body-text);
+  background-color: #B4D7CD;
   text-transform: uppercase;
 
   border: 2px solid #333333;
@@ -233,8 +237,11 @@ a.button {
 }
 
 .hero {
-  color: var(--homok);
+  color: var(--grey);
   overflow: hidden;
+}
+.heading {
+  color: var(--grey);
 }
 
 .impresszum {

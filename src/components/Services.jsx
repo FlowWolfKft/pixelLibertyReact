@@ -3,7 +3,7 @@ import React from "react";
 function Services() {
   return (
     <section className="content-box services-section">
-      <h1 className="services-title">Szolgáltatások</h1>
+      <h1 className="heading">Szolgáltatások</h1>
       <div className="services column-3">
         <ServiceCard
           title="Logó- és arculattervezés, webdesign"

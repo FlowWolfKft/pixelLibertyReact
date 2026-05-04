@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="content-box">
       <div>
-        <h1>Rólam</h1>
+        <h1 className="heading">Rólam</h1>
         <div className="column-2">
           {" "}
           <div>

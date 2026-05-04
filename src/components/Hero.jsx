@@ -12,7 +12,7 @@ function Hero() {
         tartom az aktuális trendeket, a mai modern eszközöket használva,
         vizuálisan vonzó és funkcionálisan is profi anyagokat készítek Neked.
       </p>
-      <button className="kapcsolatfelvetel">Kapcsolatfelvétel</button>
+      <button className="contact-btn">Kapcsolatfelvétel</button>
     </div>
   );
 }
