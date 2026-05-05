@@ -1,8 +1,10 @@
 import React from "react";
+import pixellibertyImg from "../assets/images/pixelliberty.png";
 
 function Hero() {
   return (
     <div className="hero content-box">
+      <div className="column-2"><div><img src={pixellibertyImg} alt="About kép" className="pixelliberty-img" /></div><div>
       <h1>Köszöntelek a Pixelliberty világában!</h1>
       <p>
         Letisztult weboldalak szolgáltatóknak- amelyek nem csak szépek,
@@ -13,7 +15,7 @@ function Hero() {
         vizuálisan vonzó és funkcionálisan is profi anyagokat készítek Neked.
       </p>
       <button className="contact-btn">Kapcsolatfelvétel</button>
-    </div>
+    </div></div></div>
   );
 }
 
