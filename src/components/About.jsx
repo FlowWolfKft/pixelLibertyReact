@@ -23,7 +23,7 @@ function About() {
               hogy minden projekt egy új történet, ahol a design segítségével
               lehet igazán kibontani a lényeget, a tervezéstől a megvalósításig.
             </p>
-            <button className="kapcsolatfelvetel">Kapcsolatfelvétel</button>
+            <button className="contact-btn">Kapcsolatfelvétel</button>
           </div>
         </div>
       </div>

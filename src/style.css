@@ -1,20 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  /*--dark-green: #2698ac;
-  --turkiz: #43fde6;
-  --zold: #80c9d8;
-  --homok: #d9d9d9;
-  --body-text: #434f49;
-  --pink: #e9a9c4;
-  --title: #2a3937;
-  --dark-pink: #dc6ea6;
-  --radius: 0.5rem;
-  --white: #fff;
-  
-  --ice-blue: #e9faff;*/
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
-
   --dark-green: #3e524c;
   --petrol-green: #094457;
   --medium-green: #679587;
@@ -252,6 +239,13 @@ a.button {
 .hero {
   color: var(--grey);
   overflow: hidden;
+}
+
+.hero p {
+  padding: 0 24px;
+}
+.hero .contact-btn {
+  margin-left: 1.5rem;
 }
 .heading {
   color: var(--grey);

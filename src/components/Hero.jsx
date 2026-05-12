@@ -4,7 +4,8 @@ import pixellibertyImg from "../assets/images/pixelliberty.png";
 function Hero() {
   return (
     <div className="hero content-box">
-      <div className="column-2"><div><img src={pixellibertyImg} alt="About kép" className="pixelliberty-img" /></div><div>
+      <div className="row"><div class="col-1-3"><img src={pixellibertyImg} alt="About kép" className="pixelliberty-img" />
+      </div><div class="col-2-3">
       <h1>Köszöntelek a Pixelliberty világában!</h1>
       <p>
         Letisztult weboldalak szolgáltatóknak- amelyek nem csak szépek,
