@@ -106,6 +106,12 @@ a:hover {
   background-color: var(--petrol-green);
   color: var(--white);
 }
+.services svg {
+  height: 12.5rem;
+  width: 12.5rem;
+  stroke-width: 0.5;
+  stroke: var(--title);
+}
 
 @media (min-width: 1024px) {
   .single-post .col-3-4 > div {
