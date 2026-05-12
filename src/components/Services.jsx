@@ -17,7 +17,7 @@ function Services() {
           buttonText="Ajánlatkérés"
         />
         <ServiceCard
-          title="Egyedi weboldalak készítése"
+          title="Egyedi weboldalak"
           description=" gyors, kompakt megoldás egyéni vállalkozók és magánszemélyek részére"
           items={[
             "One page és landing oldalak",
