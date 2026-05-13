@@ -1,12 +1,12 @@
 import React from "react";
-
 function Services() {
   return (
-    <section className="content-box services-section">
+    <section className="content-box services-section features">
       <h1 className="heading">Szolgáltatások</h1>
       <div className="services column-3">
         <ServiceCard
           title="Logó- és arculattervezés, webdesign"
+          description="Brand- és márkaépítés, a vállalkozásod arca"
           items={[
             "Kis- és nagyarculat",
             "Logó, logócsalád- vektoros tervezés",
@@ -18,7 +18,7 @@ function Services() {
         />
         <ServiceCard
           title="Egyedi weboldalak"
-          description=" gyors, kompakt megoldás egyéni vállalkozók és magánszemélyek részére"
+          description=" Gyors, kompakt megoldás egyéni vállalkozók és magánszemélyek részére"
           items={[
             "One page és landing oldalak",
             "Reszponzív kialakítás mobilra, tabletre",
@@ -31,7 +31,7 @@ function Services() {
         />
         <ServiceCard
           title="Üzleti weboldalak"
-          description="kisvállalkozásoknak, szolgáltatóknak"
+          description="Kisvállalkozásoknak, szolgáltatóknak"
           items={[
             "5-8 aloldal",
             "Adminisztrációs felület- kezelési segítséggel",
