@@ -45,7 +45,7 @@ body {
   padding: 0;
   font-family: "inter", sans-serif;
   overflow-x: hidden;
-
+  color: var(--grey);
   background: linear-gradient(180deg, #163552 0%, #122a44 100%);
 }
 
@@ -206,7 +206,7 @@ h3 {
 p {
   font-family: inter;
   font-size: 1.3rem;
-  color: var(--grey);
+
   line-height: 1.6;
 }
 .contact-btn,
@@ -253,7 +253,6 @@ a.button {
   text-align: center;
 }
 .hero {
-  color: var(--grey);
   overflow: hidden;
 }
 .hero p {
@@ -262,10 +261,7 @@ a.button {
 .hero .contact-btn {
   margin-left: 1.5rem;
 }
-.heading,
-.about {
-  color: var(--grey);
-}
+
 .about-img {
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
@@ -273,9 +269,6 @@ a.button {
 }
 .about-text {
   margin-left: 2rem;
-}
-#contact {
-  color: var(--grey);
 }
 
 .contact-form {
@@ -299,8 +292,7 @@ a.button {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-
-  background: var(--grey);
+  background: var(--white);
   color: var(--body-text);
 }
 
@@ -355,25 +347,23 @@ a.button {
   opacity: 0.9;
   background: var(--dark-pink);
 }
-.impresszum {
-  background: whitesmoke;
-  border: 2px solid var(--dark-green);
-  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
-  padding-left: 20px;
-  border-radius: 0px 20px 0px 20px;
-  max-width: 75%;
-  margin-bottom: 2rem;
+.impressum {
+ 
   transition: 0.2s ease;
   transform-origin: left center;
 }
-.impresszum:hover {
+.impressum:hover {
   transform: scale(1.02) translateX(5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   transition: 0.25s ease;
 }
 
 footer {
-  background-color: var(--petrol-green);
+
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  /*background: rgba(10, 10, 10, 0.7);*/
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 9;
   color: #fff;
@@ -384,11 +374,12 @@ footer {
 
 footer a {
   color: #fff;
+  margin-top: 2rem;
 }
-
 footer a:hover {
   color: var(--dark-pink);
 }
+footer p{margin-top: 2rem; font-size: inherit;}
 .footer-social {
   background-color: #fff;
   box-shadow: inset 0px 4px 12px 0px rgba(0, 0, 0, 0.2);
@@ -396,9 +387,8 @@ footer a:hover {
   border-bottom: solid 3px white;
   text-align: center;
 }
-#copyright p {
-  font-size: 0.75rem;
-}
+.footer-links {margin-top: 2rem;}
+
 
 @media only screen and (max-width: 1281px) {
   #head .content-box {

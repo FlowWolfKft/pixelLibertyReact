@@ -3,13 +3,11 @@ import ContactForm from "../ContactForm";
 
 function Contact() {
   return (
-    <section id='contact' className='content-box'>
+    <section className="content-box">
       <h1>Kapcsolat</h1>
 
       <ContactForm />
     </section>
   );
 }
-
 export default Contact;
-
