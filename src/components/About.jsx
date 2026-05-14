@@ -6,22 +6,25 @@ function About() {
     <div className="content-box">
       <div>
         <h1 className="heading">Rólam</h1>
-        <div className="column-2">
+        <div className="row about">
           {" "}
-          <div>
+          <div className="column-1-2">
             <img src={aboutImg} alt="About kép" className="about-img" />
           </div>
-          <div>
+          <div className="column-1-3 about-text">
             <p>
-              Hiszek abban, hogy a jó weboldal nem dísz, hanem élmény. A
-              Pixelliberty-ben UX/UI alapokra építem a digitális szabadságot. A
-              webdesign számomra nem csak munka, hanem egy újfajta szabadság is.
-              Nagyon hamar beszippantott a vizuális világ, ahol a kreativitás és
-              a technika kéz a kézben jár. A Pixelliberty az a hely, ahol
-              mindezt megélhetem: letisztult, modern weboldalakat és karakteres
-              logókat tervezek, amelyek valóban illenek a márkákhoz. Szeretem,
-              hogy minden projekt egy új történet, ahol a design segítségével
-              lehet igazán kibontani a lényeget, a tervezéstől a megvalósításig.
+              Hiszek abban, hogy egy jó weboldal nem csupán szép, hanem élményt
+              ad és bizalmat épít. A Pixelliberty-ben UX/UI szemléletre építem a
+              digitális szabadságot- letisztult, modern és átgondolt
+              megoldásokkal. Több mint 5 éve foglalkozom logótervezéssel és
+              webdesignnal, amit az elmúlt időszakban a webfejlesztés egészített
+              ki. Így nemcsak megtervezem a vizuális megjelenést, hanem egyedi,
+              működő weboldalakat is készítek- a tervezéstől egészen a
+              megvalósításig. A webdesign számomra nem csak munka, hanem kreatív
+              önkifejezés is. Nagyon hamar beszippantott az a világ, ahol a
+              design és a technológia együtt teremtenek valami igazán egyedit.
+              Szeretem, hogy minden projekt egy új történet: egy lehetőség arra,
+              hogy a márka valódi karaktere vizuálisan is életre keljen.
             </p>
             <button className="contact-btn">Kapcsolatfelvétel</button>
           </div>

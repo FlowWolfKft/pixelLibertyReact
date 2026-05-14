@@ -7,6 +7,7 @@ function Services() {
         <ServiceCard
           title="Logó- és arculattervezés, webdesign"
           description="Brand- és márkaépítés, a vállalkozásod arca"
+          price="49000 Ft-tól"
           items={[
             "Kis- és nagyarculat",
             "Logó, logócsalád- vektoros tervezés",
@@ -19,6 +20,7 @@ function Services() {
         <ServiceCard
           title="Egyedi weboldalak"
           description=" Gyors, kompakt megoldás egyéni vállalkozók és magánszemélyek részére"
+          price="190 000 Ft-tól"
           items={[
             "One page és landing oldalak",
             "Reszponzív kialakítás mobilra, tabletre",
@@ -32,19 +34,22 @@ function Services() {
         <ServiceCard
           title="Üzleti weboldalak"
           description="Kisvállalkozásoknak, szolgáltatóknak"
+          price="250 000 Ft-tól"
           items={[
             "5-8 aloldal",
-            "Adminisztrációs felület- kezelési segítséggel",
+            "Adminisztrációs felület- kezelési útmutatással",
             "Blog oldal",
+            "SEO- barát kialakítás",
             "Kapcslatfelvételi űrlap, hírlevél integráció",
-            "1 hónap support ",
+            "Domain és tárhely regisztráció, SSL (HTTPS)",
+            "1 hónap support",
           ]}
           buttonText="Ajánlatkérés"
         />
       </div>
     </section>
   );
-  function ServiceCard({ icon, title, description, items, buttonText }) {
+  function ServiceCard({ icon, title, description, price, items, buttonText }) {
     return (
       <div className="services-card">
         <div className="services-svg">
@@ -54,7 +59,9 @@ function Services() {
 
         <h3>{title}</h3>
         <p className="services-desc">{description}</p>
-
+        <div className="price">
+          <h3>{price}</h3>
+        </div>
         <ul>
           {items.map((item, index) => (
             <li key={index}>{item}</li>

@@ -1,4 +1,15 @@
 import React from "react";
-export default function Contact() {
-  return <div>Contact oldal</div>;
+import ContactForm from "../ContactForm";
+
+function Contact() {
+  return (
+    <section id='contact' className='content-box'>
+      <h1>Kapcsolat</h1>
+
+      <ContactForm />
+    </section>
+  );
 }
+
+export default Contact;
+
