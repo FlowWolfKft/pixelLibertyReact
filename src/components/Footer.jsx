@@ -14,11 +14,10 @@ function Footer() {
         </div>
 
         <div className="footer-links">
-          <Link to="/impresszum">Impresszum</Link>
+          <Link to="/impressum">Impresszum</Link>
         </div>
       </div>
     </footer>
   );
 }
-
 export default Footer;
