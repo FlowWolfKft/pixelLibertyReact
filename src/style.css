@@ -54,11 +54,11 @@ img {
   height: auto;
 }
 a {
-  color: var(--title);
+  color: var(--dark-pink);
   text-decoration: none;
 }
 a:hover {
-  color: var(--dark-green);
+  color: var(--light-green);
 }
 .services-card {
   /*background: var(--homok);*/
@@ -326,6 +326,7 @@ a.button {
 
 .checkbox a:hover {
   text-decoration: underline;
+  color: var(--light-green);
 }
 
 .contact-form button {
