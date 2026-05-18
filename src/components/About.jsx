@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import aboutImg from "../assets/images/about.jpg";
 
 function About() {
@@ -26,7 +27,9 @@ function About() {
               Szeretem, hogy minden projekt egy új történet: egy lehetőség arra,
               hogy a márka valódi karaktere vizuálisan is életre keljen.
             </p>
-            <button className="contact-btn">Kapcsolatfelvétel</button>
+            <Link to="/contact" className="contact-btn">
+              Kapcsolatfelvétel
+            </Link>
           </div>
         </div>
       </div>

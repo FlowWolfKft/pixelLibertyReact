@@ -1,7 +1,7 @@
 import React from "react";
 function Services() {
   return (
-    <section className="content-box services-section features">
+    <section id="services" className="content-box services-section features">
       <h1 className="heading">Szolgáltatások</h1>
       <div className="services column-3">
         <ServiceCard
