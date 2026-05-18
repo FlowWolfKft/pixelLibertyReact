@@ -4,6 +4,7 @@ import ContactForm from "../ContactForm";
 function Contact() {
   return (
     <div className="content-box">
+      <h1>Kapcsolatfelvétel</h1>
       <ContactForm />
     </div>
   );
