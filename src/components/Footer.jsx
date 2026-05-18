@@ -10,11 +10,15 @@ function Footer() {
         </div>
 
         <div className="footer-links">
-          <Link to="/privacy">Adatkezelési Tájékoztató</Link>
+          <Link to="/privacy" target="_blank" rel="noopener noreferrer">
+            Adatkezelési Tájékoztató
+          </Link>
         </div>
 
         <div className="footer-links">
-          <Link to="/impressum">Impresszum</Link>
+          <Link to="/impressum" target="_blank" rel="noopener noreferrer">
+            Impresszum
+          </Link>
         </div>
       </div>
     </footer>
