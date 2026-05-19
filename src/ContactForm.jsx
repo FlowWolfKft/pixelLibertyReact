@@ -1,5 +1,5 @@
 import React from "react";
-function ContactForm() {
+function ContactForm({forras}) {
   return (
     <form className="contact-form">
       <input type="text" name="name" placeholder="Név*" required />
@@ -7,6 +7,8 @@ function ContactForm() {
       <input type="email" name="email" placeholder="E-mail cím*" required />
 
       <input type="text" name="subject" placeholder="Tárgy" />
+
+      <input type="hidden" name="forras" value={forras}/>
 
       <textarea
         name="message"
@@ -20,7 +22,7 @@ function ContactForm() {
 
         <span>
           Elolvastam és elfogadom az{" "}
-          <a href="/adatkezelesi" target="_blank" rel="noopener noreferrer">
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">
             Adatkezelési Tájékoztatót
           </a>
           .

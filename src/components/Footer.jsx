@@ -4,6 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaBehance } from "react-icons/fa";
 
 function Footer() {
   return (
+    
     <footer className="footer">
       <div className="column-4">
         <div className="footer-links">
@@ -22,7 +23,7 @@ function Footer() {
         </div>
         <div className="social-icons">
           <a
-            href="https://https://www.linkedin.com/in/monikafarkasgyovai/"
+            href="https://www.linkedin.com/in/monikafarkasgyovai/"
             target="_blank"
             rel="noopener noreferrer"
           >

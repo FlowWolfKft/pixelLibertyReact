@@ -26,7 +26,7 @@ function Navbar() {
                 <Link to="/">Főoldal</Link>
               </li>
               <li>
-                <a href="#services">Szolgáltatások</a>
+                <Link to="/#services">Szolgáltatások</Link>
               </li>
               <li>
                 <Link to="/blog">Blog</Link>

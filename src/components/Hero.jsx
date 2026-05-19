@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import pixellibertyImg from "../assets/images/pixelliberty.png";
 
 function Hero() {
@@ -21,7 +22,7 @@ function Hero() {
             Naprakész szemlélettel, vizuálisan vonzó és funkcionálisan is profi
             megjelenést készítek Neked.
           </p>
-          <button className="contact-btn">Konzultációt kérek!</button>
+          <Link to="/contact" className="contact-btn">Kapcsolatfelvétel</Link>
         </div>
       </div>
     </div>

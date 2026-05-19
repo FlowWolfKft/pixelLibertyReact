@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ServiceCard from "./ServiceCard";
+
 function Services() {
   return (
     <section id="services" className="content-box services-section features">
@@ -49,28 +52,7 @@ function Services() {
       </div>
     </section>
   );
-  function ServiceCard({ icon, title, description, price, items, buttonText }) {
-    return (
-      <div className="services-card">
-        <div className="services-svg">
-          {/* ide jön majd az SVG */}
-          {icon}
-        </div>
 
-        <h3>{title}</h3>
-        <p className="services-desc">{description}</p>
-        <div className="price">
-          <h3>{price}</h3>
-        </div>
-        <ul>
-          {items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-        <button className="services-btn">{buttonText}</button>
-      </div>
-    );
-  }
 }
 
 export default Services;

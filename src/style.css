@@ -17,6 +17,7 @@
   --light-blue: #a0bbe4;
   --dark-blue: #2a6aca;
   --grey: #acacac;
+  --turkiz: #4fc2c2;
   --radius: 0.5rem;
 }
 *,
@@ -95,7 +96,6 @@ a:hover {
   /*background: var(--homok);*/
   border: 2px solid var(--homok);
   padding: 1.5rem;
-  max-width: 75%;
   margin-bottom: 2rem;
   color: var(--light-green);
   background: rgba(255, 255, 255, 0.08);
@@ -106,29 +106,28 @@ a:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: all 0.35s ease;
 }
-.service-card:hover {
+/*.service-card:hover {
   transform: translateY(-8px);
-}
+}*/
 .services-btn {
   display: inline-block;
-  padding: 0.8rem 1.2rem;
-  color: var(--body-text);
-  /*background-color: var(--green);*/
+  padding: 0.8rem;
+  color: #fff;
+  background-color: transparent;
   text-transform: uppercase;
-  border: 2px solid var(--pink);
-  border-radius: 24px;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: 1;
-  transition: transform 0.2s ease;
+  border: 2px solid var(--light-green);
+  border-radius: 32px;
   margin-bottom: 2rem;
 }
 .services-btn:hover {
-  font-weight: bold;
+  color: var(--homok);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 6px 14px rgba(203, 44, 190, 0.25);
+  border: 2px solid var(--dark-pink);
+  border-radius: 32px;
+  transition: all 0.15s ease;
   transform: scale(1.1);
-  background-color: transparent;
-  color: var(--dark-pink);
-  border: 2px solid whitesmoke;
 }
 .price h3 {
   color: var(--dark-pink);
@@ -291,7 +290,7 @@ a.button {
   text-transform: uppercase;
 }
 
-.impressum {
+/*.impressum {
   transition: 0.2s ease;
   transform-origin: left center;
 }
@@ -300,6 +299,7 @@ a.button {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   transition: 0.25s ease;
 }
+.impressum li{font-size: 1.2rem;}*/
 
 footer {
   z-index: 999;
@@ -350,6 +350,53 @@ footer p {
 }
 .footer-links {
   margin-top: 2rem;
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--grey);
+  color: #fff;
+  padding: 1.5rem;
+  z-index: 9999;
+}
+
+.cookie-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cookie-buttons button {
+  padding: 0.6rem 1rem;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 32px;
+  transition: all 0.2s ease;
+}
+
+.cookie-buttons button:first-child {
+  background: var(--turkiz);
+  color: var(--white);
+}
+
+.cookie-buttons button:last-child {
+  background: var(--petrol-green);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.cookie-buttons button:last-child:hover,
+.cookie-buttons button:first-child:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 @media only screen and (max-width: 1281px) {
