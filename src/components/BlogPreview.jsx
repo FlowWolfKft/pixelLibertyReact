@@ -1,25 +1,27 @@
 import { useEffect, useState } from "react";
-
+import { getAllPosts } from "../services/blogService";
 import { Link } from "react-router-dom";
 
-function Blog() {
+function BlogPreview() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    getAllPosts().then(setPosts);
+    getAllPosts().then((data) => {
+      setPosts(data.slice(0, 3));
+    });
   }, []);
 
   return (
-    <div>
-      <h1>Blog</h1>
+    <section>
+      <h2>Latest posts</h2>
 
       {posts.map((post) => (
         <div key={post.slug}>
           <Link to={`/blog/${post.slug}`}>{post.slug}</Link>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 
-export default Blog;
+export default BlogPreview;
