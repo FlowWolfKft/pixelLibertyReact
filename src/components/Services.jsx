@@ -19,6 +19,7 @@ function Services() {
             "Webdesign irányelvek",
           ]}
           buttonText="Ajánlatkérés"
+          quoterequestforras="logo"
         />
         <ServiceCard
           title="Egyedi weboldalak"
@@ -33,6 +34,7 @@ function Services() {
             "Domain és tárhely regisztráció, SSL (HTTPS)",
           ]}
           buttonText="Ajánlatkérés"
+          quoterequestforras="onepage"
         />
         <ServiceCard
           title="Üzleti weboldalak"
@@ -48,11 +50,11 @@ function Services() {
             "1 hónap support",
           ]}
           buttonText="Ajánlatkérés"
+          quoterequestforras="business"
         />
       </div>
     </section>
   );
-
 }
 
 export default Services;
