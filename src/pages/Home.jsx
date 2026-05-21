@@ -10,7 +10,7 @@ function Home() {
       <Hero></Hero>
       <Services></Services>
       <About></About>
-      <Blog></Blog>
+      <Blog fooldal="true"></Blog>
       <Contact></Contact>
     </>
   );

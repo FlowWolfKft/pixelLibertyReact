@@ -3,7 +3,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
-import Blog from "./pages/Blog";
+import Blog from "./components/Blog";
+import BlogContent from "./components/BlogContent";
 
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -28,6 +29,10 @@ function App() {
           <Route path="impressum" element={<Impressum />} />
           <Route path="ajanlatkeres" element={<QuoteRequest />} />
         </Route>
+        <Route
+          path="/blog/:bloglink"
+          element={<BlogContent/>}
+        />
         <Route path="/blog" element={<Blog />} />
       </Routes>{" "}
     </>

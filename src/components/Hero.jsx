@@ -6,14 +6,14 @@ function Hero() {
   return (
     <div className="hero content-box">
       <div className="row">
-        <div class="col-1-3">
+        <div className="col-1-3">
           <img
             src={pixellibertyImg}
             alt="About kép"
             className="pixelliberty-img"
           />
         </div>
-        <div class="col-2-3">
+        <div className="col-2-3">
           <h1>Köszöntelek a Pixelliberty világában!</h1>
           <p>
             Letisztult weboldalak és látványos arculatok — amelyek nemcsak
@@ -22,7 +22,9 @@ function Hero() {
             Naprakész szemlélettel, vizuálisan vonzó és funkcionálisan is profi
             megjelenést készítek Neked.
           </p>
-          <Link to="/contact" className="contact-btn">Kapcsolatfelvétel</Link>
+          <Link to="/contact" className="contact-btn">
+            Kapcsolatfelvétel
+          </Link>
         </div>
       </div>
     </div>
