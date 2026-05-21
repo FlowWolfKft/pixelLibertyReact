@@ -10,7 +10,7 @@ function Blog({ fooldal }) {
       link={blog.link}
       image={blog.image}
       cim={blog.cim}
-      extract={blog.extract}
+      excerpt={blog.excerpt}
     ></BlogPreview>
   ));
 

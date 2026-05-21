@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function BlogPreview({ link, image, cim, extract }) {
+function BlogPreview({ link, image, cim, excerpt }) {
   return (
     <div className="content-box">
       <div className="services-card">
         <h2>{cim}</h2>
-        <div>{extract}</div>
+        <div>{excerpt}</div>
         <Link
           to={{
             pathname: `/blog/${link}`,

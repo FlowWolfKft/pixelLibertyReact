@@ -24,16 +24,12 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="/blog/:bloglink" element={<BlogContent />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="impressum" element={<Impressum />} />
           <Route path="ajanlatkeres" element={<QuoteRequest />} />
         </Route>
-        <Route
-          path="/blog/:bloglink"
-          element={<BlogContent/>}
-        />
-        <Route path="/blog" element={<Blog />} />
       </Routes>{" "}
     </>
   );
