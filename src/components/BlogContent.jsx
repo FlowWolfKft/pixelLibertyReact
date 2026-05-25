@@ -36,9 +36,11 @@ function BlogContent() {
   }, [bloglink]);
 
   return (
-    <div className="content-box">
-      <Markdown>{mdContent}</Markdown>
-    </div>
+    <section className="content-box services-card">
+      <div className="blog-content">
+        <Markdown>{mdContent}</Markdown>
+      </div>
+    </section>
   );
 }
 

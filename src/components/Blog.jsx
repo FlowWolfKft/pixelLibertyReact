@@ -17,9 +17,11 @@ function Blog({ fooldal }) {
   return (
     <div className="content-box">
       <h1 className="heading">Blog</h1>
-      <p>Ez itt a csodás blog oldalam, Markdown-nal :)</p>
+      <h3>
+        Webdesign, UX/UI trendek, webfejlesztés és minden, ami egy digitális
+        játszótérbe belelfér.
+      </h3>
       <div className="column-3">{blogItem}</div>
-      <button className="contact-btn">Kapcsolatfelvétel</button>
     </div>
   );
 }

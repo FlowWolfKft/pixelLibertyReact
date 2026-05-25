@@ -411,8 +411,14 @@ footer p {
   .hero p {
     padding: 0;
   }
+  .hero .contact-btn {
+    margin-left: 0;
+  }
   .contact-form button {
     width: 50%;
+  }
+  #services {
+    padding: 0;
   }
   footer .column-4 {
     display: inline-block;

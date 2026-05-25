@@ -1,0 +1,34 @@
+:root {
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --dark-green: #3e524c;
+  --petrol-green: #094457;
+  --medium-green: #679587;
+  --green: #8a9e94;
+  --light-green: #b6c0b3;
+  --homok: #d9d9d9;
+  --body-text: #434f49;
+  --pink: #e9a9c4;
+  --dark-pink: #cb2cbe;
+  --title: #2a3937;
+  --white: #fff;
+  --ice-blue: #e9faff;
+  --light-blue: #a0bbe4;
+  --dark-blue: #2a6aca;
+  --grey: #acacac;
+  --turkiz: #4fc2c2;
+  --radius: 0.5rem;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.blog-content ol li::marker {
+  font-size: 1.3rem;
+}
+.blog-content li {
+  font-size: 1.3rem;
+  color: var(--pink);
+  font-style: italic;
+}

@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 
 function BlogPreview({ link, image, cim, excerpt }) {
   return (
-    <div className="content-box">
+    <div id="services" className="content-box">
       <div className="services-card">
         <h2>{cim}</h2>
-        <div>{excerpt}</div>
-        <Link
-          to={{
-            pathname: `/blog/${link}`,
-          }}
-          className="services-btn"
-        >
-          Tovább olvasok
-        </Link>
+        <div>
+          <p>{excerpt}</p>
+          <Link
+            to={{
+              pathname: `/blog/${link}`,
+            }}
+            className="services-btn"
+          >
+            Tovább olvasok
+          </Link>
+        </div>
       </div>
     </div>
   );
