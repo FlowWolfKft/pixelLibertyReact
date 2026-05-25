@@ -1,32 +1,38 @@
 [
   {
-    "image": "",
+    "image": "/images/blog/hogyan-legyen-huha-weboldalad.webp",
     "link": "hogyan-legyen-huha-weboldalad",
     "cim": "Hogyan legyen hűha weboldalad",
-    "excerpt": "hogyan legyen hűha weboldalad..."
+    "excerpt": "Böngészünk az interneten, vagy keresünk valamit, észre sem vesszük, hogy..."
   },
   {
     "image": "",
     "link": "szineknek-all-a-vilag",
     "cim": "Színeknek áll a világ",
-    "excerpt": "dlkjasiawue j k"
+    "excerpt": "Válasszunk színpalettát a weboldalunkhoz!"
   },
   {
     "image": "",
-    "link": "webdesign-trendek-2026",
-    "cim": "Webdesign trendek 2026",
-    "excerpt": "jkl432k4 "
+    "link": "az-ot-kedvenc-webdesign-trendem-2025-ben",
+    "cim": "Az 5 kedvenc webdesign trendem 2025-ben",
+    "excerpt": "Nézzük meg az 5 kedvenc webdesign trendemet 2025-ben."
   },
   {
     "image": "",
     "link": "felhotancos",
-    "cim": "Felhőtáncos",
-    "excerpt": "lékwérk é54l32 54"
+    "cim": "Cloud Dancer- Felhőtáncos",
+    "excerpt": "Hogyan lesz az uncsi fehérből Pantone Color of the Year 2026-ban?"
   },
   {
     "image": "",
     "link": "mi-kerul-ennyibe-egy-logon",
     "cim": "Mi kerül ennyibe egy logón?",
-    "excerpt": "eiuouiroewo 534ui iudf"
+    "excerpt": "A szomszéd Manyi néni összerakott Paintben egy logót magának..."
+  },
+  {
+    "image": "",
+    "link": "logotrendek-2026-ban",
+    "cim": "Logótrendek 2026",
+    "excerpt": "-ba. A minimalizmuson túl"
   }
 ]

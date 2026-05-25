@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pixellibertyImg from "../assets/images/pixelliberty.png";
+import pixellibertyImg from "../../assets/images/pixelliberty.png";
 
 function Hero() {
   return (
