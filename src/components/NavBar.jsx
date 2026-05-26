@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header id="header">
       <div className="content-box nav-wrapper">
@@ -13,26 +13,38 @@ function Navbar() {
         <div className="nav-wrapper">
           <div
             id="hamburger"
-            className={open ? "nyitva" : ""}
-            onClick={() => setOpen(!open)}
+            className={isOpen ? "nyitva" : ""}
+            onClick={() => setIsOpen(!isOpen)}
           >
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <nav id="main-menu" className={open ? "nyitva" : ""}>
+
+          <nav id="main-menu" className={isOpen ? "nyitva" : ""}>
             <ul>
               <li>
-                <Link to="/">Főoldal</Link>
+                <Link to="/" onClick={() => setIsOpen(false)}>
+                  Főoldal
+                </Link>
               </li>
+
               <li>
-                <Link to="/#services">Szolgáltatások</Link>
+                <Link to="/#services" onClick={() => setIsOpen(false)}>
+                  Szolgáltatások
+                </Link>
               </li>
+
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link to="/blog" onClick={() => setIsOpen(false)}>
+                  Blog
+                </Link>
               </li>
+
               <li>
-                <Link to="/contact">Kapcsolat</Link>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  Kapcsolat
+                </Link>
               </li>
             </ul>
           </nav>

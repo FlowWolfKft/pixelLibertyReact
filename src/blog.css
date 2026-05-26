@@ -48,6 +48,11 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   /*transition: all 0.35s ease;*/
 }
+.blog-content img {
+  border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--homok);
+}
 .back-button {
   display: inline-block;
   margin-top: 3rem;
