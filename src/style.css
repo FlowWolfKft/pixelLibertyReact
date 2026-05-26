@@ -51,10 +51,10 @@ body {
   background: linear-gradient(180deg, #163552 0%, #122a44 100%);
 }
 
-img {
+/*img {
   max-width: 100%;
   height: auto;
-}
+}*/
 h1,
 h2,
 h3 {
@@ -213,6 +213,7 @@ a.button {
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
   border: 2px solid var(--homok);
+  max-width: 100%;
 }
 .about-text {
   margin-left: 2rem;
