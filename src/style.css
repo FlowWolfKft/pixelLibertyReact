@@ -156,7 +156,7 @@ ul li {
   color: #4fc2c2;
   font-weight: 700;
 }
-
+/*#region Contact-Form */
 .contact-btn {
   display: inline-block;
   padding: 1rem 1rem;
@@ -187,6 +187,34 @@ ul li {
   line-height: 1;*/
   transform: scale(1.1);
 }
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+.popup {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+  margin-top: 1rem;
+}
+
+/* #endregion */
 .pixelliberty-img {
   margin: 4rem 0 0 4rem;
   width: 50%;

@@ -6,6 +6,7 @@ function ContactForm({ forras }) {
   const [formSubject, setFormSubject] = useState("");
   const [formForras, setFormForras] = useState(forras || "egyeb");
   const [formText, setFormText] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleFormSubmit = async (event) => {
     event.stopPropagation();
@@ -29,76 +30,92 @@ function ContactForm({ forras }) {
         forras: formForras,
         text: formText,
       }),
+    }).then((response) => {
+      setFormName("");
+      setFormEmail("");
+      setFormSubject("");
+      setFormText("");
+      setShowPopup(true);
     });
-
     return false;
     //
   };
 
   return (
-    <form
-      className="contact-form"
-      action="#"
-      method="POST"
-      onSubmit={handleFormSubmit}
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Név*"
-        value={formName}
-        onChange={(event) => setFormName(event.target.value)}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="E-mail cím*"
-        required
-        value={formEmail}
-        onChange={(event) => setFormEmail(event.target.value)}
-      />
-      <input
-        type="text"
-        name="subject"
-        placeholder="Tárgy"
-        value={formSubject}
-        onChange={(event) => setFormSubject(event.target.value)}
-      />
-      {forras ? (
-        <select
-          value={forras}
-          onChange={(event) => setFormForras(event.target.value)}
-        >
-          <option value="logo">Logótervezés</option>
-          <option value="onepage">Egyedi weboldal</option>
-          <option value="business">Üzleti weboldal</option>
-        </select>
-      ) : (
-        <input type="hidden" name="forras" value={forras} />
-      )}
-      <textarea
-        name="message"
-        placeholder="Üzenet"
-        rows="6"
-        required
-        value={formText}
-        onChange={(event) => setFormText(event.target.value)}
-      ></textarea>
-      <span>*Kötelezően kitöltendő</span>
-      <label className="checkbox">
-        <input type="checkbox" required />
+    <>
+      <form
+        className="contact-form"
+        action="#"
+        method="POST"
+        onSubmit={handleFormSubmit}
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Név*"
+          value={formName}
+          onChange={(event) => setFormName(event.target.value)}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail cím*"
+          required
+          value={formEmail}
+          onChange={(event) => setFormEmail(event.target.value)}
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Tárgy"
+          value={formSubject}
+          onChange={(event) => setFormSubject(event.target.value)}
+        />
+        {forras ? (
+          <select
+            value={forras}
+            onChange={(event) => setFormForras(event.target.value)}
+          >
+            <option value="logo">Logótervezés</option>
+            <option value="onepage">Egyedi weboldal</option>
+            <option value="business">Üzleti weboldal</option>
+          </select>
+        ) : (
+          <input type="hidden" name="forras" value={forras} />
+        )}
+        <textarea
+          name="message"
+          placeholder="Üzenet"
+          rows="6"
+          required
+          value={formText}
+          onChange={(event) => setFormText(event.target.value)}
+        ></textarea>
+        <span>*Kötelezően kitöltendő</span>
+        <label className="checkbox">
+          <input type="checkbox" required />
 
-        <span>
-          Elolvastam és elfogadom az{" "}
-          <a href="/privacy" target="_blank" rel="noopener noreferrer">
-            Adatkezelési Tájékoztatót
-          </a>
-          .
-        </span>
-      </label>
-      <button type="submit">Küldés</button>
-    </form>
+          <span>
+            Elolvastam és elfogadom az{" "}
+            <a href="/privacy" target="_blank" rel="noopener noreferrer">
+              Adatkezelési Tájékoztatót
+            </a>
+            .
+          </span>
+        </label>
+        <button type="submit">Küldés</button>
+      </form>
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <p>Köszönöm! Az üzeneted sikeresen elküldve.</p>
+
+            <button onClick={() => setShowPopup(false)}>OK</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
