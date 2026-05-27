@@ -14,7 +14,12 @@ function QuoteRequest() {
       </h3>
 
       <ContactForm forras={forras} />
-    </div>
+      <div>
+        <div>
+        <a className="back-button" href="/">
+          ← Vissza
+        </a>
+    </div></div></div>
   );
 }
 

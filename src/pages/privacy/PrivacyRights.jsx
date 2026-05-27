@@ -170,9 +170,9 @@ function PrivacyRights() {
           </button>
         </div>
         <div>
-          <a className="contact-btn" href="/">
-            Vissza
-          </a>
+          <a className="back-button" href="/">
+          ← Vissza
+        </a>
         </div>
       </div>
     </>

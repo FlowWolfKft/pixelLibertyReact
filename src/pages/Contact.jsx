@@ -7,6 +7,10 @@ function Contact() {
       <h1>Kapcsolatfelvétel</h1>
 <h3>Minden új ügyfelemnek egy fél órás, online konzultációt biztosítok díjmentesen. Dolgozzunk együtt az álmaid megvalósításán!</h3>
       <ContactForm />
+      <div>
+        <a className="back-button" href="/">
+          ← Vissza
+        </a></div>
     </section>
   );
 }

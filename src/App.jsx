@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Blog from "./components/Blog";
 import BlogContent from "./components/BlogContent";
 
+
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Impressum from "./pages/Impressum";

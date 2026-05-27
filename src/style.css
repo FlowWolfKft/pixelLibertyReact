@@ -318,18 +318,45 @@ a.button {
   transition: 0.3s ease;
   text-transform: uppercase;
 }
-
-/*.impressum {
-  transition: 0.2s ease;
-  transform-origin: left center;
+.pl-select .pl__control {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  min-height: 48px;
+  box-shadow: none;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
 }
-.impressum:hover {
-  transform: scale(1.02) translateX(5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  transition: 0.25s ease;
+/* focus állapot – mint a többi inputod */
+.pl-select .pl__control--is-focused {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(211, 148, 203, 0.15);
 }
-.impressum li{font-size: 1.2rem;}*/
 
+/* kiválasztott szöveg */
+.pl-select .pl__single-value,
+.pl-select .pl__placeholder {
+  color: var(--homok);
+}
+
+/* dropdown */
+.pl-select .pl__menu {
+  background: #0f2236;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+*/
+
+/* option */
+.pl-select .pl__option {
+  background: transparent;
+  color: white;
+}
+
+.pl-select .pl__option--is-focused {
+  background: var(--homok);
+}
 footer {
   z-index: 999;
   backdrop-filter: blur(12px);

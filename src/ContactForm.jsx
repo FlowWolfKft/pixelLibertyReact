@@ -1,5 +1,6 @@
 import { Coins } from "lucide-react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
 function ContactForm({ forras }) {
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
@@ -7,6 +8,23 @@ function ContactForm({ forras }) {
   const [formForras, setFormForras] = useState(forras || "egyeb");
   const [formText, setFormText] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+
+  const options = [
+    { value: "logo", label: "Logótervezés" },
+    { value: "onepage", label: "Egyedi weboldal" },
+    { value: "business", label: "Üzleti weboldal" },
+  ];
+  const [selectedService, setSelectedService] = useState(null);
+
+  useEffect(() => {
+    if (forras) {
+      options.map((opt) => {
+        if (opt.value === forras) {
+          setSelectedService(opt);
+        }
+      });
+    }
+  }, [forras]);
 
   const handleFormSubmit = async (event) => {
     event.stopPropagation();
@@ -73,14 +91,17 @@ function ContactForm({ forras }) {
           onChange={(event) => setFormSubject(event.target.value)}
         />
         {forras ? (
-          <select
-            value={forras}
-            onChange={(event) => setFormForras(event.target.value)}
-          >
-            <option value="logo">Logótervezés</option>
-            <option value="onepage">Egyedi weboldal</option>
-            <option value="business">Üzleti weboldal</option>
-          </select>
+          <Select className="pl-select"
+          classNamePrefix="pl"
+          
+            value={selectedService}
+            options={options}
+            onChange={(option) => {
+              setFormForras(option.value);
+              setSelectedService(option);
+            }}
+            placeholder="Válassz szolgáltatást"
+          />
         ) : (
           <input type="hidden" name="forras" value={forras} />
         )}
