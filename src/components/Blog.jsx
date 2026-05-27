@@ -22,6 +22,9 @@ function Blog({ fooldal }) {
         játszótérbe belelfér.
       </h3>
       <div className="column-3">{blogItem}</div>
+      <a className="back-button" href="/">
+          ← Vissza
+        </a>
     </div>
   );
 }
