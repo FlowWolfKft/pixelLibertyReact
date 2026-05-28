@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Blog from "./components/Blog";
 import BlogContent from "./components/BlogContent";
 
-
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Impressum from "./pages/Impressum";
@@ -29,9 +28,9 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="impressum" element={<Impressum />} />
-          <Route path="ajanlatkeres" element={<QuoteRequest />} />
+          <Route path="/ajanlatkeres" element={<QuoteRequest />} />
         </Route>
-      </Routes>{" "}
+      </Routes>
     </>
   );
 }
