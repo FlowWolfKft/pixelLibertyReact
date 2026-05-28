@@ -88,6 +88,7 @@ p {
 a {
   color: var(--dark-pink);
   text-decoration: none;
+  word-break: break-all;
 }
 a:hover {
   color: var(--light-green);
