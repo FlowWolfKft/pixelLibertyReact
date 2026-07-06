@@ -25,7 +25,7 @@
 *:after {
   box-sizing: border-box;
 }
-@media only screen and (max-width: 1025px) {
+/*@media only screen and (max-width: 1025px) {
   html {
     font-size: 1.4vw;
   }
@@ -40,6 +40,9 @@
     font-size: 14px;
     scroll-behavior: smooth;
   }
+}*/
+html {
+  font-size: clamp(14px, 1.4vw, 16px);
 }
 
 body {
