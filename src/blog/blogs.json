@@ -1,5 +1,11 @@
 [
   {
+    "image": "/images/blog/vibe-coding.png",
+    "link": "vibe-coding-ai-weboldal",
+    "cim": "Vibe coding: elég az AI egy jó weboldal elkészítéséhez?",
+    "excerpt": "A vibe coding gyorsabbá és elérhetőbbé tette a weboldalak készítését. De mitől..."
+  },
+  {
     "image": "/images/blog/weboldal-fajtak-opt.webp",
     "link": "weboldal-fajtak",
     "cim": "Landing, one page vagy  több oldalas- milyen az ideális weboldal?",
