@@ -5,6 +5,7 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Blog from "./components/Blog";
 import BlogContent from "./components/BlogContent";
+import WeboldalKeszites from "./pages/WeboldalKeszites";
 
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
@@ -29,6 +30,7 @@ function App() {
           <Route path="privacy" element={<Privacy />} />
           <Route path="impressum" element={<Impressum />} />
           <Route path="/ajanlatkeres" element={<QuoteRequest />} />
+          <Route path="weboldal-keszites" element={<WeboldalKeszites />} />
         </Route>
       </Routes>
     </>

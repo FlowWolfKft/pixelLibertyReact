@@ -1,0 +1,58 @@
+:root {
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --dark-green: #3e524c;
+  --petrol-green: #094457;
+  --medium-green: #679587;
+  --green: #8a9e94;
+  --light-green: #b6c0b3;
+  --homok: #d9d9d9;
+  --body-text: #434f49;
+  --pink: #e9a9c4;
+  --dark-pink: #cb2cbe;
+  --title: #2a3937;
+  --white: #fff;
+  --ice-blue: #e9faff;
+  --light-blue: #a0bbe4;
+  --dark-blue: #2a6aca;
+  --grey: #acacac;
+  --radius: 0.5rem;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h3 {
+  color: var(--pink);
+}
+#gdprcontent a {
+  word-break: break-word;
+}
+
+.gdpr-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.gdpr-table td,
+.gdpr-table th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: top;
+}
+ol {
+  padding-left: 1.5rem;
+}
+ol li::marker {
+  color: var(--pink);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+ol li {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  line-height: 2rem;
+}

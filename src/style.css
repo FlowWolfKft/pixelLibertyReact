@@ -175,6 +175,103 @@ ul li {
   transition: transform 0.2s ease;*/
   margin-bottom: 2rem;
 }
+
+.hero .specular-button {
+  max-width: calc(100% - 1.5rem);
+  margin: 0 0 2rem 1.5rem;
+  box-shadow:
+    inset 0 0 0 1px var(--dark-pink),
+    0 0 18px rgba(203, 44, 190, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.specular-button {
+  --sb-radius: 18px;
+  --sb-tint: #ffffff;
+  --sb-tint-opacity: 0;
+  --sb-blur: 0px;
+  --sb-text-color: #f5f5f5;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 0;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  color: var(--sb-text-color);
+  background: color-mix(
+    in srgb,
+    var(--sb-tint) calc(var(--sb-tint-opacity) * 100%),
+    transparent
+  );
+  border-radius: var(--sb-radius);
+  backdrop-filter: blur(var(--sb-blur));
+  -webkit-backdrop-filter: blur(var(--sb-blur));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.15s ease;
+}
+
+.specular-button:active {
+  transform: scale(0.97);
+}
+
+.specular-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--sb-text-color) 60%, transparent);
+  outline-offset: 3px;
+}
+
+.specular-button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.specular-button:disabled:active {
+  transform: none;
+}
+
+.specular-button--sm {
+  font-size: 0.85rem;
+  padding: 10px 22px;
+}
+
+.specular-button--md {
+  font-size: 1rem;
+  padding: 14px 30px;
+}
+
+.specular-button--lg {
+  font-size: 1.15rem;
+  padding: 18px 40px;
+}
+
+/* Canvas extends past the button so the rim glow can bleed outside the edge */
+.specular-button__fx {
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.specular-button__fx canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.specular-button__label {
+  position: relative;
+  z-index: 2;
+}
+.hero .specular-button__label {
+  line-height: 1.35;
+}
 .contact-btn:hover,
 .contact-form button:hover {
   padding: 1rem 1rem;
@@ -241,14 +338,27 @@ a.button {
   margin-left: 1.5rem;
 }
 
+.about {
+  gap: 48px;
+}
+
+.about-photo {
+  flex: 0 0 320px;
+  min-width: 0;
+}
+
 .about-img {
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
   border: 2px solid var(--homok);
-  max-width: 100%;
 }
+
 .about-text {
-  margin-left: 2rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .contact-form {
@@ -457,43 +567,205 @@ footer p {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
+.services-card .package-button {
+  max-width: 100%;
+  margin-top: auto;
+  align-self: flex-start;
+  box-shadow:
+    inset 0 0 0 1px var(--dark-pink),
+    0 0 18px rgba(203, 44, 190, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.package-button .specular-button__label {
+  line-height: 1.35;
+}
+
+.services-section .column-2 > .services-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-section .column-2 > .services-card ul {
+  margin-bottom: 2rem;
+}
+.web-services-page {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.web-services-page > p {
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.web-services-page .services-section > h2 {
+  text-align: center;
+}
+
+.web-services-page .column-2 > div {
+  display: flex;
+  min-width: 0;
+  scroll-margin-top: 100px;
+}
+
+.web-services-page .column-2 > div > .services-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.web-services-page .web-addon-section > .services-card {
+  background: linear-gradient(
+    135deg,
+    rgba(233, 169, 196, 0.12),
+    rgba(233, 169, 196, 0.03)
+  );
+  border-color: rgba(233, 169, 196, 0.4);
+}
+.web-addon-section {
+  margin-top: 4rem;
+  scroll-margin-top: 100px;
+}
+
+.web-addon-section > .services-card {
+  margin: 0 auto;
+}
+
+.web-services-page .package-note {
+  margin: 1rem auto 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.web-package-terms {
+  margin: 4rem auto 0;
+}
+
+.web-package-terms h2 {
+  text-align: center;
+}
+
+.web-package-terms h3 {
+  margin-top: 2rem;
+  color: var(--pink);
+}
+
+.web-package-terms p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.work-process {
+  width: 100%;
+  max-width: 1440px;
+  margin: 4rem auto;
+  padding: 0 20px;
+}
+.heading,
+.work-process h2,
+.work-process-intro {
+  text-align: center;
+}
+
+.work-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-process-step {
+  padding: 1.5rem;
+  border-top: 1px solid var(--pink);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0 0 18px 18px;
+}
+
+.work-process-number {
+  color: var(--pink);
+  font-size: 2rem;
+}
+
+.work-process-step h3 {
+  color: var(--homok);
+}
+
+.work-process-step p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.web-services-page > .work-process {
+  padding: 0;
+}
 
 @media only screen and (max-width: 1281px) {
   #head .content-box {
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width: 481px) {
-  .about-text {
-    margin-left: 0;
+@media (max-width: 1024px) {
+  .work-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .hero p {
-    padding: 0;
+}
+@media (max-width: 600px) {
+  .work-process-grid {
+    grid-template-columns: 1fr;
   }
-  .hero .contact-btn {
-    margin-left: 0;
-  }
-  .contact-form button {
-    width: 50%;
-  }
-  #services {
-    padding: 0;
-  }
-  footer .column-4 {
-    display: inline-block;
-    justify-items: center;
-  }
-  .footer-links {
-    width: 100%;
-  }
-  footer .social-icons a {
-    margin: 1rem;
-    padding-top: 2rem;
-  }
-  footer p {
-    font-size: 0.9rem;
-  }
-  .checkbox a {
-    word-break: normal;
+  @media only screen and (max-width: 481px) {
+    .about-text {
+      margin-left: 0;
+    }
+    .hero p {
+      padding: 0;
+    }
+    .hero .contact-btn {
+      margin-left: 0;
+    }
+    .hero .specular-button {
+      max-width: 100%;
+      margin-left: 0;
+      padding: 16px 24px;
+      font-size: 1rem;
+    }
+    .about {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-photo {
+      flex: none;
+      width: min(280px, 100%);
+      margin: 0 auto;
+    }
+
+    .about-text {
+      width: 100%;
+    }
+    .contact-form button {
+      width: 50%;
+    }
+    #services {
+      padding: 0;
+    }
+    footer .column-4 {
+      display: inline-block;
+      justify-items: center;
+    }
+    .footer-links {
+      width: 100%;
+    }
+    footer .social-icons a {
+      margin: 1rem;
+      padding-top: 2rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+    .checkbox a {
+      word-break: normal;
+    }
   }
 }

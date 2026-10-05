@@ -30,7 +30,7 @@ function Navbar() {
               </li>
 
               <li>
-                <Link to="/#services" onClick={() => setIsOpen(false)}>
+                <Link to="/weboldal-keszites" onClick={() => setIsOpen(false)}>
                   Szolgáltatások
                 </Link>
               </li>
