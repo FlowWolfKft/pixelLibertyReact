@@ -68,16 +68,20 @@ h1 {
   font-weight: 400;
   font-style: oblique;
   font-size: 3rem;
+  color: var(--homok);
   position: relative;
   padding-bottom: 1rem;
   z-index: 1;
   text-align: center;
 }
 h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  position: relative;
-  padding-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  line-height: 1.2;
+  color: var(--homok);
+  margin: 0 0 24px;
+  padding-bottom: 0;
 }
 h3 {
   font-size: 1.5rem;
@@ -133,6 +137,7 @@ a:hover {
   transition: all 0.15s ease;
   transform: scale(1.1);
 }
+
 .price h3 {
   color: var(--dark-pink);
   font-weight: bold;
@@ -315,29 +320,141 @@ ul li {
   margin-top: 1rem;
 }
 
-/* #endregion */
-.pixelliberty-img {
-  margin: 4rem 0 0 4rem;
-  width: 50%;
-  opacity: 0.6;
-  filter: blur(2px);
+.hero-bird {
+  position: relative;
+  width: clamp(140px, 14vw, 220px);
+  margin: 24px 12% 12px auto;
+  pointer-events: none;
+  --bird-start-x: -65vw;
+  --bird-start-y: 260px;
+  animation: bird-arrival 6s linear 0.3s 1 both;
 }
+.bird-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(210, 240, 255, 0.25) 38%,
+    rgba(255, 255, 255, 1) 45%,
+    transparent 47%,
+    rgba(255, 255, 255, 1) 49%,
+    transparent 51%,
+    rgba(255, 255, 255, 0.85) 54%,
+    rgba(210, 240, 255, 0.35) 60%,
+    transparent 78%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  opacity: 0.15;
+
+  -webkit-mask-image: var(--bird-mask);
+  mask-image: var(--bird-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  animation: bird-aurora 8s ease-in-out 0.3s 1 both;
+}
+
+@keyframes bird-aurora {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0.75;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  100% {
+    background-position: 100% 50%;
+    opacity: 0.25;
+  }
+}
+@keyframes bird-arrival {
+  0% {
+    opacity: 0;
+    transform: translate(var(--bird-start-x), var(--bird-start-y)) rotate(-6deg);
+  }
+
+  25% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.pixelliberty-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  opacity: 0.35;
+  filter: blur(0.5px);
+}
+
 a.button {
   margin-left: 40px;
 }
 .align-center {
   text-align: center;
 }
-.hero {
+.hero.content-box {
   overflow: hidden;
-}
-.hero p {
-  padding: 0 24px;
-}
-.hero .contact-btn {
-  margin-left: 1.5rem;
+  padding-top: 40px;
+  padding-bottom: 72px;
 }
 
+.hero-content {
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  margin: 0 0 28px;
+  padding-bottom: 0;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.hero p {
+  max-width: 960px;
+  margin: 0 auto 32px;
+  padding: 0;
+}
+@media (min-width: 769px) {
+  .hero-bird {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    margin: 0;
+  }
+
+  .hero h1 {
+    padding-inline: clamp(160px, 16vw, 240px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-bird {
+    width: 110px;
+  }
+
+  .hero h1 {
+    padding-inline: 125px;
+  }
+}
 .about {
   gap: 48px;
 }
@@ -676,10 +793,81 @@ footer p {
 }
 
 .work-process-step {
+  position: relative;
   padding: 1.5rem;
   border-top: 1px solid var(--pink);
   background: rgba(255, 255, 255, 0.04);
   border-radius: 0 0 18px 18px;
+}
+.work-process-light {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.work-process-light::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20%;
+  height: 2px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--pink) 35%,
+    #fff 65%,
+    transparent
+  );
+
+  box-shadow: 0 0 4px rgba(233, 169, 196, 0.45);
+  opacity: 0;
+
+  animation: process-light-run 16s linear infinite;
+  animation-delay: var(--step-delay, 0s);
+  animation-play-state: paused;
+}
+
+.work-process-grid.is-visible .work-process-light::after {
+  animation-play-state: running;
+}
+
+@keyframes process-light-run {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 0.8;
+  }
+
+  12.5% {
+    transform: translateX(500%);
+    opacity: 0.8;
+  }
+
+  13%,
+  100% {
+    transform: translateX(500%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-process-light {
+    display: none;
+  }
+
+  .work-process-light::after {
+    animation: none;
+  }
 }
 
 .work-process-number {
@@ -713,6 +901,30 @@ footer p {
 @media (max-width: 600px) {
   .work-process-grid {
     grid-template-columns: 1fr;
+    .hero.content-box {
+      padding-top: 24px;
+      padding-bottom: 48px;
+    }
+
+    .hero-bird {
+      width: 120px;
+      margin-right: 4%;
+      margin-bottom: 20px;
+      --bird-start-x: -65vw;
+      --bird-start-y: 140px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bird {
+        animation: none;
+      }
+    }
+    .bird-aurora {
+      animation: none;
+    }
+
+    .hero h1 br {
+      display: none;
+    }
   }
   @media only screen and (max-width: 481px) {
     .about-text {
@@ -724,11 +936,14 @@ footer p {
     .hero .contact-btn {
       margin-left: 0;
     }
-    .hero .specular-button {
+    .hero .specular-button,
+    .about .about-button {
       max-width: 100%;
-      margin-left: 0;
-      padding: 16px 24px;
-      font-size: 1rem;
+      margin: 0;
+      box-shadow:
+        inset 0 0 0 1px var(--dark-pink),
+        0 0 18px rgba(203, 44, 190, 0.18),
+        0 8px 24px rgba(0, 0, 0, 0.25);
     }
     .about {
       flex-direction: column;

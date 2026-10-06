@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const steps = [
   {
@@ -20,6 +20,24 @@ const steps = [
 ];
 
 function WorkProcess() {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        grid.classList.toggle("is-visible", entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(grid);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="work-process">
       <h2>Így készül el a weboldalad</h2>
@@ -29,12 +47,19 @@ function WorkProcess() {
         hol tartunk és mi következik.
       </p>
 
-      <ol className="work-process-grid">
+      <ol ref={gridRef} className="work-process-grid">
         {steps.map((step, index) => (
-          <li key={step.title} className="work-process-step">
+          <li
+            key={step.title}
+            className="work-process-step"
+            style={{ "--step-delay": `${index * 2}s` }}
+          >
+            <span className="work-process-light" aria-hidden="true" />
+
             <span className="work-process-number" aria-hidden="true">
               {String(index + 1).padStart(2, "0")}
             </span>
+
             <h3>{step.title}</h3>
             <p>{step.text}</p>
           </li>
